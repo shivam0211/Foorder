@@ -1,0 +1,47 @@
+<% include ../partials/header %>
+<h2 style="color:rgb(223, 48, 48); margin-bottom: 50px; margin-top: 100px;"><%= restaurant.name%></h2>
+<div class="drink-item">
+    <div class="item-name-wrap">
+        <div class="item-name"><label htmlFor="hot-drink">Snacks</label></div>
+    </div>
+    <div class="item-top-row">
+        <div class="item-options">
+            Burger
+            <div class="item-price" style="margin-left:50px;">
+                <button class="addtocart">Add to Cart</button>
+                Rs.70
+            </div>
+        </div>
+        <div class="item-options">
+                Pizza 
+                <div class="item-price" style="margin-left:50px;">
+                    <div class="item-price" style="margin-left:10px;">
+                        <button class="addtocart">Add to Cart</button>
+                    </div>
+                    Rs.150
+                </div>
+            </div>
+    </div>
+    <div class="item-name-wrap">
+        <div class="item-name" style="margin-top:50px"><label htmlFor="hot-drink">Drinks</label></div>
+    </div>
+    <div class="item-top-row">
+        <div class="item-options">
+            Coffee
+            <div class="item-price" style="margin-left:50px;">
+                <button class="addtocart">Add to Cart</button>
+                Rs.30
+            </div>
+        </div>
+        <div class="item-options">
+                Iced-Tea
+                <div class="item-price" style="margin-left:50px;">
+                    <div class="item-price" style="margin-left:-10px;">
+                        <button class="addtocart">Add to Cart</button>
+                    </div>
+                    Rs.30
+                </div>
+            </div>
+    </div>
+</div>
+<% include ../partials/footer %>

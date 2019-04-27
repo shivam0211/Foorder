@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Foorder</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/register.css">
+    <script>
+            function startTime() {
+              var today = new Date();
+              var h = today.getHours();
+              var m = today.getMinutes();
+              var s = today.getSeconds();
+              m = checkTime(m);
+              s = checkTime(s);
+              document.getElementById('txt').innerHTML =
+              h + ":" + m + " IST";
+              var t = setTimeout(startTime, 10000);
+            }
+            function checkTime(i) {
+              if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+              return i;
+            }
+            </script>
+</head>
+<body onload="startTime()">
+    <nav class="navbar navbar-default" style="background-color: #e9ecef; margin-bottom: 0px; height: 63px">
+        <div class="container-fluid">
+            <div class="navbar-header" style="margin-right: -440px">
+                <a href="/"><img src="img/Delish Dream Dish.png" class="logo"></a>
+            </div>
+            <a class="navbar-brand" href="/" style="color:  rgb(223, 48, 48); font-size: 35px; margin-top: 5px">Foorder</a>
+            <!-- <div class="navbar-collapse collapse">  -->
+                <ul class="navbar-nav navbar-right nav">
+                    <li>
+                        <div id="txt" style="font:16pt Arial; margin-top: 20px; margin-right: 17px; color:rgb(223, 48, 48)"></div>
+                    </li>
+                    <% if(!currentUser){ %>
+                        <li><a href="/login" style="font-size: 20px; margin-top: 6px; color: rgb(223, 48, 48)">Login</a></li>
+                        <li><a href="/register" style="font-size: 20px; margin-top: 6px; color: rgb(223, 48, 48)">Sign Up</a></li>
+                    <% } else { %>
+                        <li id="user" style="font-size: 20px; margin-top: 17px; color: rgb(223, 48, 48)">Signed in as <%= currentUser.username %></li>
+                        <li><a href="/logout" style="font-size: 20px; margin-top: 6px; color: rgb(223, 48, 48)">Logout</a></li>
+                    <% } %>
+                   </ul> 
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+            <% if(error && error.length>0){ %>
+                <div class="alert alert-danger" role="alert" style="margin-top:10px">
+                    <%= error%>
+                </div>
+            <% } %>    
+            <% if(success && success.length>0){ %>
+                <div class="alert alert-success" role="alert" style="margin-top:10px; margin-bottom: 10px">
+                    <%= success%>
+                </div>
+            <% } %>     
+        </div>
+    

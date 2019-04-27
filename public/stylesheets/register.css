@@ -1,0 +1,76 @@
+.body1{
+    background: #fff;
+    border: 10px solid rgb(223, 48, 48);
+    border-radius: 7px;
+    margin: 100px auto;
+    padding: 20px;
+    width: 350px;
+    height: 450px;
+}
+#login{
+    font-size: 45px;
+    text-align: center;
+}
+input{
+    width: 220px;
+    height: 50px;
+    border: 2px solid black;
+    font-size: 15px;
+}
+.button1{
+    display: block;
+    width: 10em;
+    margin: 3em auto 0 auto;
+    background: rgb(223, 48, 48);
+    border: none;
+    border-radius: 7px;
+    padding: 0.5em 0.1em;
+    color: #fff;
+    border: 2px solid #fff;
+    font-size: 15px;
+}
+#signup{
+    color: black;
+    text-align: center;
+    font-size: 20px;
+    margin-top: 20px;
+}
+.lock {
+	position: relative;
+	top: 2px;
+}
+.icon{
+    top: 20px;
+}
+.input-addon {
+    float: left;
+    background-color: white;
+    position: relative;
+    height: 60px;
+    margin-top: 4px;
+    margin-right: -5px;
+    margin-left: 15px;
+}
+.box{
+    margin-top: 2px;
+    padding-bottom: 2px;
+    height: 30px;
+    border-radius: 7px;
+    padding-left: 15px;
+}
+.input[type=text] {
+    color: black;
+    margin-bottom: 15px;
+    background-color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+}
+.input[type=password] {
+    color: black;
+    margin-bottom: 10px;
+    background-color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+}

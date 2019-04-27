@@ -1,0 +1,34 @@
+<% include ../partials/header %>
+<div class="container">
+        <div class="username-container" style="margin-left:-150px; margin-right:-150px;">
+                <div class="title-cover-landing">
+                    <div class="title-cover-left"></div>
+                    <div class="title-cover-right">
+                        <div class="title-cover-right-child">
+                            <h1>Welcome to Foorder</h1>
+                            <h1>View our hand-picked restaurants near you</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    <% restaurants.forEach(function(restaurant){ %>
+    <a href="/restaurants/<%= restaurant._id%>">
+    <div class="shop-list-item-container">
+            <div class="shop-list-item-details">
+                <h2 style="color:#3E474F; text-align:left; margin-left: 15px; margin-bottom: 0px"><%= restaurant.name %></h2>
+                <p style="margin-left: 10px"><%= restaurant.city %></p>
+                <div class="shop-list-bottom-row">
+                    <div class="open-now"><i class="fa fa-clock-o" aria-hidden="true"></i> Open now!</div>
+                    <p class="shop-list-distance">0.8Km</p>
+                    <!-- <p>
+                        <a href="/restaurants/<%= restaurant._id%>" class="btn btn-primary">More Info</a>
+                    </p> -->
+                </div>
+            </div>
+    </div>
+    </a>
+    <% }) %>
+</div>
+
+
+<% include ../partials/footer %>
